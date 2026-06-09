@@ -1,0 +1,18 @@
+export function getTimeElapsed(timestamp) {
+    if (!timestamp) return '0 m';
+    let postTime;
+    if (timestamp.seconds) {
+        // Convert Firestore Timestamp to milliseconds
+        postTime = timestamp.toMillis();
+    } else {
+        postTime = timestamp;
+    }
+    let diff = Date.now() - postTime;
+    if (diff < 0) diff = 0;
+    const minutes = Math.floor(diff / 60000);
+    if (minutes < 60) return `${minutes} m`;
+    const hours = Math.floor(minutes / 60);
+    if (hours < 24) return `${hours} h`;
+    const days = Math.floor(hours / 24);
+    return `${days} d`;
+}

@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "OncoTrack",
+    "slug": "OncoTrack",
+    "scheme": "oncoapp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/appIcon/appicon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/appIcon/appicon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nathandebeer.OncoTrack"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/appIcon/appicon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "softwareKeyboardLayoutMode": "pan",
+      "package": "com.nathandebeer.OncoTrack"
+    },
+    "web": {
+      "favicon": "./assets/appIcon/appicon.png"
+    },
+    "jsEngine": "jsc",
+    "plugins": [
+      "expo-font",
+      "@react-native-community/datetimepicker"
+    ]
+  }
+}
